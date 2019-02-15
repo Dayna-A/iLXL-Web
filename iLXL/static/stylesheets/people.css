@@ -1,0 +1,71 @@
+.bodyContainer{
+    margin: 2rem;
+    padding: 3rem;
+    padding-top: 2.5rem;
+}
+.card-deck .card{
+    margin: 5px;
+    max-width: 246px;
+    min-width: 246px;
+    background-color:  rgba(255,255,255,0.9);
+    height: 331px;
+    box-shadow: 0px 7px 15px -1px rgba(0,0,0,0.15);
+}
+.card .card-body{
+    max-height: 120px;
+}
+.card img{
+    width: 10rem;
+    height: 10rem;
+}
+a [class*= "fa"]{
+    color:#01426a;
+    margin-left:3px;
+    margin-right: 3px;
+}
+small span{
+    font-style: italic
+}
+.card-deck{
+    margin-bottom: 15px;
+    max-width:1146px;
+    margin-top: 15px;
+}
+
+.collab .card{
+    max-width: 250px;
+    max-height: 135px;
+    border: 0px;
+    background-color:  rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 7px 15px -1px rgba(0,0,0,0);
+}
+.collab h5 {
+    color: rgba(250,174,49, 1);
+    margin-bottom: 0px;
+}
+.collab .ghost h5{
+    color:white;
+}
+.collab small span{
+    font-style: italic;
+}
+
+.leftside{
+    align-self: left;
+}
+
+
+
+.popover-header{
+    color:#f7f7f7;
+    background-color: #01426a;
+
+}
+.popover-body{
+    color: #01426a;
+}
+
+.bs-popover-right .arrow::after,
+.bs-popover-auto[x-placement^="right"] .arrow::after {
+  /* border-right-color: 	#f0f0f0; */
+}

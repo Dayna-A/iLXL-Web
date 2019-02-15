@@ -1,0 +1,53 @@
+{%extends "base.html"%}
+{%block headIncludes%}
+<link rel="stylesheet" type="text/css" href="/static/stylesheets/projects.css">
+{%endblock%}
+
+{%block contentBody%}
+<div class="row projectTabs">
+    <div class="col-2 naVeR">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active nav1" id="v-pills-ppr-tab" data-toggle="pill" href="#v-pills-ppr" role="tab"
+                aria-controls="v-pills-ppr" aria-selected="true">PPR</a>
+            <a class="nav-link nav2" id="v-pills-pprWeb-tab" data-toggle="pill" href="#v-pills-pprWeb" role="tab"
+                aria-controls="v-pills-pprWeb" aria-selected="false">PPR-Web</a>
+            <a class="nav-link nav3" id="v-pills-pprGuide-tab" data-toggle="pill" href="#v-pills-pprGuide" role="tab"
+                aria-controls="v-pills-pprGuide" aria-selected="false">PPR-Guides</a>
+            <a class="nav-link nav4" id="v-pills-next-tab" data-toggle="pill" href="#v-pills-next" role="tab"
+                aria-controls="v-pills-next" aria-selected="false">Up Next</a>
+        </div>
+    </div>
+    <div class="col-10 projectDescription">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-ppr" role="tabpanel" aria-labelledby="v-pills-ppr-tab">
+                <h3>Programming Problem Repository</h3>
+                <i>Lonnie Hansen, Leah Smith, Sunny To, San Tran, Paul Inventado</i>
+                <h6>Github repository: <a href="https://github.com/ilxl-ppr">https://github.com/ilxl-ppr</a></h6>
+                <p>Development of a comprehensive repository that contains programming problems with automated tests and graders to provide students with immediate feedack. This repository is being designed as a lab-excercise resource for cs professors teaching core coding classes.</p>
+                <p class="addendum">Although this repository is currently limited to C++ problems the goal is to eventually enhance the repository to support each problem in multiple languages.</p>
+            </div>
+            <div class="tab-pane fade" id="v-pills-pprGuide" role="tabpanel" aria-labelledby="v-pills-pprGuide-tab">
+                <h3>Programming Problem Repository Guides</h3>
+                <i>Paul Inventado</i>
+                <h6>Github repository: <a href="https://github.com/ILXL-guides">https://github.com/ILXL-guides</a></h6>
+                <p>Development of supplemental programming guides and tutorials for CSUF students.</p>
+            </div>
+            <div class="tab-pane fade" id="v-pills-pprWeb" role="tabpanel" aria-labelledby="v-pills-pprWeb-tab">
+                <h3>Programming Problem Repository Web Application</h3>
+                <i>Ruby Abutaleb, Dayna Anderson, Andrew Gomez, Evan Purpura, Paul Invendato</i>
+                <h6>Github repository: <a href="https://github.com/ILXL/ppr-web">https://github.com/ILXL/ppr-web</a></h6>
+                <p>Development of a web-based interface for the Programming Problem Repository to help instructors manage its content, deploy programming problems in class, and facilitate grading.</p>
+                <p class="addendum">Later functionality goals include the generation of gitHub classroom projects and the ability to populate grade results back into Titanium.</p>
+            </div>
+            <div class="tab-pane fade" id="v-pills-next" role="tabpanel" aria-labelledby="v-pills-next-tab">
+                <h3>Ideas On The Table</h3><br>
+                <p><span class="bolder">Course Pathways Application:</span><br>
+                iLXL is currently in talks with CSUF's Department of Education regarding the development of an application that would help students of any major to maximize their undergraduate course plans to meet prerequisites for the post-graduate teaching program.</p>
+                <p><span class="bolder">Smart Assistant Application:</span><br>
+                The team is also investigating a natural language parsing project in collaboration with the CSUF Department of Pyschology to enable handsfree learning with any content.</p>
+                <p><span><i>Have a Machine Learning project idea? We may be just the team your looking for! Contact us to see if we can help.</i></span></p>
+                
+            </div>
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,80 @@
+{%extends "base.html"%}
+
+{%block headIncludes%}
+<link rel="stylesheet" type="text/css" href="/static/stylesheets/people.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+
+    });
+</script>
+{%endblock%}
+{%block contentBody%}
+<div class="d-flex flex-column">
+    <h3>Our Members</h3>
+    <div class="members card-deck d-flex justify-content-center">
+        {%for member in members %}
+        {%if member.active_member%}
+        <div class="card">
+            <img class="card-img-top rounded-circle mx-auto mt-2" src="{{member.headshot.url}}" alt="Card image cap">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{member.name}}</h5>
+                <p class="card-text"><small class="text-muted">{{member.position}} <span>({{member.semesters_active}})</span></small></p>
+            </div>
+            <div class="card-footer text-right">
+                {% if member.twitter_url%}
+                <a href="{{member.twitter_url}}"><i class="fab fa-twitter"></i></a>
+                {% endif %}
+                {% if member.github_url%}
+                <a href="{{member.github_url}}"><i class="fab fa-github"></i></a>
+                {% endif %}
+                {% if member.linkedin_url%}
+                <a href="{{member.linkedin_url}}"><i class="fab fa-linkedin"></i></a>
+                {% endif %}
+                {% if member.email%}
+                <a href="mailto:{{member.email}}"> <i class="fa fa-envelope"></i></a>
+                {% endif %}
+                {% if member.website_url%}
+                <a href="{{member.website_url}}"><i class="fas fa-globe-americas"></i></a>
+                {%endif%}
+                <a class="pops" href="#" data-toggle="popover" data-trigger="hover" title="Graduation {{member.expected_graduation}}"
+                    data-html="true" data-placement="right" data-content="PRIMARY INTEREST: {{member.cs_interest}}<br>INTERNSHIP AVAILABILITY: {{member.internship_availability}}<br>NEW GRAD AVAILABILITY: {{member.newgrad_availability}}"><i
+                        class="fas fa-user-graduate"></i></a>
+            </div>
+        </div>
+        {%endif%}
+        {%endfor%}
+
+    </div>
+    <div class="mt-4">
+        <h3>Current Collaborators</h3>
+        <div class="collab card-deck d-flex justify-left">
+            {%for collaborator in collaborators %}
+            <div class="card">
+                <div class="card-body text-left">
+                    <h5 class="card-title">{{collaborator.name}}</h5>
+                    <p class="card-text"><small class="text-muted"><strong>{{collaborator.position}}<br><span>{{collaborator.association}}</span></strong></small></p>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+    <div class="mt-4">
+        <h3>iLXL Alumni</h3>
+        <div class="collab card-deck d-flex justify-left">
+            {%for member in members %}
+            {%if not member.active_member%}
+            <div class="card">
+                <div class="card-body text-left">
+                    <h5 class="card-title">{{member.name}}</h5>
+                    <p class="card-text"><small class="text-muted"><strong>{{member.position}}<br><span>{{member.semesters_active}}</span><br>Graduated: {{member.expected_graduation}}</strong></small></p>
+                </div>
+            </div>
+            {%endif%}
+            {%endfor%}
+        </div>
+    </div>
+</div>
+{%endblock%}

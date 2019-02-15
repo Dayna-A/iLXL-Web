@@ -1,0 +1,51 @@
+{%extends "base.html"%}
+{%block headIncludes%}
+<link rel="stylesheet" type="text/css" href="/static/stylesheets/publications.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+<script>
+    $(document).ready(() => {
+        var today = new Date();
+        var birth = new Date('August 27, 2018 08:00:00');
+        var weeks = Math.round(Math.ceil((today - birth + 1) / (1000 * 60 * 60 * 24)) / 7);
+
+        $(aging).text(weeks);
+    });
+</script>
+{%endblock%}
+{%block contentBody%}
+<div class="pub">
+    <h2>Publications</h2>
+    <div class="card-body text-center">        
+        <h2 id="legend">2018</h2>
+        <fieldset>
+            <!-- <legend>
+                <h4 class="card-title">2018</h4>
+            </legend> -->
+            <p class="card-text "><b>We're <span id="aging"></span> weeks old!<br> Publications are in our future and
+                    will
+                    probably look something like this: </b><br><br>Inventado, Smith, Hansen, To, Tran, Abutaleb,
+                Anderson, Gomez,
+                Pupura (in-press)
+                Feedback Design Patterns for Programming Online Learning Systems. 2019 Journal of Intelligent Learning
+                in Education. 2019, Los Angeles.<a href="#"><i class="fas fa-link"></i></a></span></p>
+        </fieldset>
+    </div>
+</div>
+
+<div id="grantdiv" class="mt-5">
+    <h2>Current Grants</h2>
+    <ul id="grants">
+        <li class="my-4"><i class="fas fa-money-bill-wave"></i>
+            <t><b> Inventado, P.S. </b>Investigating Factors that Lead to Learning Challenges in CS Education. <i>Junior/Senior
+                    Faculty Intramural Grant, California State University Fullerton,</i> Spring 2019.
+        </li>
+        <li class="my-4"><i class="fas fa-money-bill-wave"></i>
+            <t><b> Inventado, P.S. </b>Building a Programming Problem Repository that Facilitates Personalization
+                and Timely Feedback. <i>Faculty Enhancement and Instructional Development (FEID) Intramural Grant,
+                    California State University Fullerton,</i> Fall 2018.
+        </li>
+    </ul>
+</div>
+
+{%endblock%}

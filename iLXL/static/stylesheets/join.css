@@ -1,0 +1,33 @@
+#joinForm{
+    background-color: rgba(255,255,255,0.7);
+    border-radius:7px;
+    margin-top: 5rem;
+    justify-self: center;
+    max-width: 400px;
+    padding: 25px;
+}
+.btn{
+    margin:10px;
+    align-self: center;
+}
+#grad{
+    max-width:100px;
+}
+.form-check{
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-check-label{
+    padding-top:5px;
+}
+#applied{
+    background-color: rgba(255,255,255,0.7);
+    border-radius:7px;
+    margin-top: 5rem;
+    justify-self: center;
+    align-content:center;
+    justify-content:center;
+    max-width: 400px;
+    padding: 25px;
+}

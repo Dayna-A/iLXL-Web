@@ -1,0 +1,64 @@
+bodyContainer{
+    height:100%;
+    width:97%;
+}
+#events{
+    justify-content: flex-start;
+    width:100%;
+    padding:2rem;
+    height:100%;
+}
+#allevents{
+    width:25%;
+    background-color:#01426a; 
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#allevents ul{
+    list-style: none;
+    padding-inline-start: 0px;
+}
+#allevents li{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    height:auto;
+}
+.date{
+    display:block;
+    text-align: center;
+    background-color: white;
+    height: 50px;
+    width:50px;
+    border-radius:10px;
+    margin:10px;
+    line-height: 1;
+}
+.date span{
+    height:26px;
+    font-size:24px;
+}
+#allevents a{
+    color:white;
+    font-size:14px;
+    margin:10px;
+    margin-left:0px;
+    width:100%-70px;
+    word-wrap: normal;
+}
+li h5{
+    color:lightgray;
+    margin:10px;
+}
+#eventdetails{
+    width: 75%;
+}
+#eventdetails .mycard{
+    margin-left: 10px;
+    margin-bottom:10px;
+    border-radius: 5px;
+    padding: 10px;
+    width:100%;
+    background-color: rgba(255,255,255,0.7);
+}

@@ -1,0 +1,47 @@
+{%extends "base.html"%}
+{%block headIncludes%}
+<link rel="stylesheet" type="text/css" href="/static/stylesheets/join.css">
+{%endblock%}
+{%block contentBody%}
+<form id="joinForm" class="d-flex flex-column" action="{% url 'applied'%}" method="POST">{% csrf_token %}
+
+    <h4>Interested in working with us?<br><small>Submit your application here!</small></h4>
+
+    <div class="form-row">
+        <label class="col" for="firstN">First Name
+            <input type="text" class="form-control" id="firstN" name="fn" placeholder="Alan" required></label>
+        <label class="col" for="lastN">Last Name
+            <input type="text" class="form-control" id="lastN" name="ln" placeholder="Turing" required></label>
+    </div>
+    <label for="emailAdd">Email address</label>
+    <input type="email" class="form-control" id="emailAdd" name="email" placeholder="Enter your email" required>
+    <div class="form-row">
+        <label class="col" for="highest">Highest C++ Course
+            <select class="custom-select" id="highest" name="highest" required>
+                <option>None</option>
+                <option>CPSC 120</option>
+                <option>CPSC 121</option>
+                <option>CPSC 131</option>
+            </select></label>
+        <label class="col" for="status">CSUF Status
+            <select class="custom-select" id="status" name="status" required>
+                <option selected>Undergraduate</option>
+                <option >Graduate</option>
+            </select></label>
+    </div>
+    <div class="form-row">
+        <label class="col" for="grad">Graduating
+            <input type="text" class="form-control" id="grad" name="grad" placeholder="5/19" required></label>
+        <div class="form-check col">
+            <label class="form-check-label" for="epp">
+                <input type="checkbox" value="1" class="form-check-input" id="epp" name="epp">
+                Epp Complete</label>
+        </div>
+    </div>
+    <div class="form-row">
+        <label class="col" for="pprsub">We are always hunting for new program problems for the PPR Web project! In the space provided below please write the prompt for an original programming problem well suited to a CPSC 120-131 class. 
+            <textarea type="text" class="form-control" id="pprsub" rows="10" name="pprsub" placeholder="My original programming problem..."></textarea></label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{%endblock%}

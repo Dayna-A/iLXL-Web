@@ -1,0 +1,33 @@
+body{
+   /*  background-color: rgba(255,255,255,.1);
+    background-image:url("/static/img/tiley2.png");
+    background-size: 185px auto;
+    background-repeat: repeat; */
+}
+.headerShadows{
+    box-shadow: 0px 7px 15px -1px rgba(0,0,0,0.15);
+}
+
+  .headLogo{
+    height:120px;
+    width:329px;
+    object-position: left center;
+    }
+ 
+ li a{
+     font-size: 22px;
+     padding-bottom: 0.15rem;
+ }
+ .navbar{
+     padding-bottom: 0rem;
+     padding-top: 0.25rem;
+
+ }
+ .container-fluid{
+     padding:0px;
+ }
+ .headerShadows .active{
+    color: white!important;
+    border-bottom:4px solid rgba(255,255,255,.8);
+
+ }

@@ -1,0 +1,40 @@
+{%extends "base.html"%}
+{%block headIncludes%}
+<link rel="stylesheet" type="text/css" href="/static/stylesheets/contactus.css">
+{%endblock%}
+{%block contentBody%}
+<form id="contactForm" class="d-flex flex-column" action="{% url 'submitted'%}" method="POST">{% csrf_token %}
+
+    <h4>Have Questions, Comments or Projects to Team Up On?<br><small>Send us your thoughts: </small></h4>
+    <div class="form-row">
+        <label class="col" for="firstN">First Name
+            <input type="text" class="form-control" id="firstN" name="fn" placeholder="Elizebeth" required></label>
+        <label class="col" for="lastN">Last Name
+            <input type="text" class="form-control" id="lastN" name="ln" placeholder="Friedman" required></label>
+    </div>
+    <label for="emailAdd">Your Email address</label>
+    <input type="email" class="form-control" id="emailAdd" name="email" placeholder="motherofallcodebreaking@ilxl.com" required>
+    
+    <div class="form-row">
+        <label class="col-5" for="recipChannel">Recipient Group
+            <select class="custom-select" id="recipChannel" name="recipChannel" required>
+                <!-- Slack webhooks have been removed from the option values for security purposes -->
+                <option value="#">Dr.
+                    Inventado</option>
+                <option value="#">PPR Team</option>
+                <option value="#">PPR
+                    Guides Team</option>
+                <option value="#">PPR Web
+                    Team</option>
+            </select></label>
+            <label class="col-7" for="subj">Subject
+                    <input type="text" class="form-control" id="subj" name="subj" placeholder="Have you Considered..." required></label>
+    </div>
+    
+    <div class="form-row">
+        <label class="col" for="messageContent">Your Message
+            <textarea type="text" class="form-control" id="messageContent" rows="10" name="messageContent" placeholder="Some very polite suggestions or inquiries..."></textarea></label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{%endblock%}
